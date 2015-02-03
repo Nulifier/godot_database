@@ -1,4 +1,5 @@
 #include "database.h"
+#include "godot_vfs.h"
 
 void Database::_bind_methods()
 {
@@ -50,6 +51,7 @@ String Database::getErrorMessage() const
 Database::Database()
 : mpDatabase(nullptr)
 {
+	sqlite3_vfs_register(sqlite3_godot_vfs(), 1);
 }
 
 Database::~Database()

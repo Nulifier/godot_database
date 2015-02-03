@@ -40,7 +40,7 @@ Error Statement::prepare(Ref<Database>& db, const String& statement)
 	}
 	else {
 		// TODO: Error handling
-		//ERR_PRINT(("Prepare code: " + itos(err)).utf8().get_data());
+		ERR_PRINT(("Prepare code: " + itos(err)).utf8().get_data());
 		ERR_PRINT("Failed to prepare statement");
 		return FAILED;
 	}
